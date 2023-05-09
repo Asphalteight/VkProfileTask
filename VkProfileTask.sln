@@ -2,7 +2,7 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{0813FC32-D83F-4BFC-8A06-E90FD87041C9}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Task", "Task", "{8B97DB5D-3005-4CDB-B03F-6837D46698B4}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "VkTask", "VkTask", "{8B97DB5D-3005-4CDB-B03F-6837D46698B4}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Application", "Application", "{E450C56D-2267-44E1-A68D-A26B0A93407E}"
 EndProject
@@ -14,19 +14,19 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Host", "Host", "{5623CE97-1
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{CD87ED64-C017-4E02-B269-AE04F8599BEB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Task.Application.AppData", "src\Task\Application\Task.Application.AppData\Task.Application.AppData.csproj", "{B8BD1E1E-A1A7-4B42-9D6F-791B47F6F5A3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VkTask.Application.AppData", "src\VkTask\Application\VkTask.Application.AppData\VkTask.Application.AppData.csproj", "{B8BD1E1E-A1A7-4B42-9D6F-791B47F6F5A3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Task.Contracts", "src\Task\Contracts\Task.Contracts\Task.Contracts.csproj", "{6B7535DC-8BAD-4FE0-A108-6417DE1D6F84}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VkTask.Contracts", "src\VkTask\Contracts\VkTask.Contracts\VkTask.Contracts.csproj", "{6B7535DC-8BAD-4FE0-A108-6417DE1D6F84}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Task.Domain", "src\Task\Domain\Task.Domain\Task.Domain.csproj", "{43922094-9745-4245-939C-B737088A151A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VkTask.Domain", "src\VkTask\Domain\VkTask.Domain\VkTask.Domain.csproj", "{43922094-9745-4245-939C-B737088A151A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Task.Infrastructure", "src\Task\Infrastructure\Task.Infrastructure\Task.Infrastructure.csproj", "{30AA1B28-C077-4273-B8E9-93C1C238986B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VkTask.Infrastructure", "src\VkTask\Infrastructure\VkTask.Infrastructure\VkTask.Infrastructure.csproj", "{30AA1B28-C077-4273-B8E9-93C1C238986B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Task.Infrastructure.DataAccess", "src\Task\Infrastructure\Task.Infrastructure.DataAccess\Task.Infrastructure.DataAccess.csproj", "{18E92212-F849-4B5C-BCA2-2AAAB0B814E0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VkTask.Infrastructure.DataAccess", "src\VkTask\Infrastructure\VkTask.Infrastructure.DataAccess\VkTask.Infrastructure.DataAccess.csproj", "{18E92212-F849-4B5C-BCA2-2AAAB0B814E0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Task.Host.Api", "src\Task\Host\Task.Host.Api\Task.Host.Api.csproj", "{BA92F071-50F3-47FA-A725-3DFC7A61EBEE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VkTask.Host.Api", "src\VkTask\Host\VkTask.Host.Api\VkTask.Host.Api.csproj", "{BA92F071-50F3-47FA-A725-3DFC7A61EBEE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Task.Host.Migrator", "src\Task\Host\Task.Host.Migrator\Task.Host.Migrator.csproj", "{D1128A87-EA40-44AA-AF2F-7215F87D5BBE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VkTask.Host.Migrator", "src\VkTask\Host\VkTask.Host.Migrator\VkTask.Host.Migrator.csproj", "{D1128A87-EA40-44AA-AF2F-7215F87D5BBE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

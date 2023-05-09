@@ -1,0 +1,201 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>VkTask.Host.Api</name>
+    </assembly>
+    <members>
+        <member name="T:VkTask.Host.Api.Controllers.UserController">
+            <summary>
+            Контроллер для работы с пользователями.
+            </summary>
+            <response code="500">Произошла внутренняя ошибка.</response>
+        </member>
+        <member name="M:VkTask.Host.Api.Controllers.UserController.#ctor(Microsoft.Extensions.Logging.ILogger{VkTask.Host.Api.Controllers.UserController},VkTask.Application.AppData.Users.Services.IUserService)">
+            <summary>
+            Инициализирует экземпляр <see cref="T:VkTask.Host.Api.Controllers.UserController"/>
+            </summary>
+            <param name="logger">Сервис логирования.</param>
+            <param name="userService">Сервис пользователей.</param>
+        </member>
+        <member name="M:VkTask.Host.Api.Controllers.UserController.RegisterUser(VkTask.Contracts.Users.CreateUserDto,System.Threading.CancellationToken)">
+            <summary>
+            Создание нового пользователя.
+            </summary>
+            <param name="dto">Модель создания пользователя.</param>
+            <param name="cancellationToken">Токен отмены.</param>
+            <response code="201">Пользователь успешно создан.</response>
+            <response code="400">Модель данных запроса невалидна.</response>
+            <response code="422">Произошёл конфликт бизнес-логики.</response>
+            <returns>Идентификатор зарегистрированного пользователя.</returns>
+        </member>
+        <member name="M:VkTask.Host.Api.Controllers.UserController.Update(System.Int32,VkTask.Contracts.Users.UpdateUserDto,System.Threading.CancellationToken)">
+            <summary>
+            Обновить пользователя.
+            </summary>
+            <param name="id">Идентификатор.</param>
+            <param name="dto">Модель обновления пользователя.</param>
+            <param name="cancellationToken">Токен отмены.</param>
+            <response code="200">Запрос выполнен успешно.</response>
+            <response code="400">Модель данных запроса невалидна.</response>
+            <response code="404">Пользователь с указанным идентификатором не найден.</response>
+            <returns>Модель обновленного пользователя.</returns>
+        </member>
+        <member name="M:VkTask.Host.Api.Controllers.UserController.DeleteById(System.Int32,System.Threading.CancellationToken)">
+            <summary>
+            Удалить пользователя по идентификатору.
+            </summary>
+            <param name="id">Идентификатор.</param>
+            <param name="cancellationToken">Токен отмены.</param>
+            <response code="204">Запрос выполнен успешно.</response>
+            <response code="403">Доступ запрещён.</response>
+        </member>
+        <member name="M:VkTask.Host.Api.Controllers.UserController.GetById(System.Int32,System.Threading.CancellationToken)">
+            <summary>
+            Получить пользователя по идентификатору.
+            </summary>
+            <param name="id">Идентификатор.</param>
+            <param name="cancellationToken">Токен отмены.</param>
+            <response code="200">Запрос выполнен успешно.</response>
+            <response code="404">Пользователь с указанным идентификатором не найден.</response>
+            <returns>Модель пользователя.</returns>
+        </member>
+        <member name="M:VkTask.Host.Api.Controllers.UserController.GetAll(System.Threading.CancellationToken)">
+            <summary>
+            Получить список пользователей.
+            </summary>
+            <param name="cancellationToken">Токен отмены.</param>
+            <response code="200">Запрос выполнен успешно</response>
+            <returns>Список моделей пользователей.</returns>
+        </member>
+        <member name="T:VkTask.Host.Api.Controllers.UserGroupController">
+            <summary>
+            Контроллер для работы с группами.
+            </summary>
+            <response code="500">Произошла внутренняя ошибка.</response>
+        </member>
+        <member name="M:VkTask.Host.Api.Controllers.UserGroupController.#ctor(Microsoft.Extensions.Logging.ILogger{VkTask.Host.Api.Controllers.UserGroupController},VkTask.Application.AppData.UserGroups.Services.IUserGroupService)">
+            <summary>
+            Инициализирует экземпляр <see cref="T:VkTask.Host.Api.Controllers.UserGroupController"/>
+            </summary>
+            <param name="logger">Сервис логирования.</param>
+            <param name="userGroupService">Сервис пользователей.</param>
+        </member>
+        <member name="M:VkTask.Host.Api.Controllers.UserGroupController.GetAll(System.Threading.CancellationToken)">
+            <summary>
+            Получить список групп.
+            </summary>
+            <param name="cancellationToken">Токен отмены.</param>
+            <response code="200">Запрос выполнен успешно</response>
+            <returns>Список моделей групп.</returns>
+        </member>
+        <member name="M:VkTask.Host.Api.Controllers.UserGroupController.GetById(System.Int32,System.Threading.CancellationToken)">
+            <summary>
+            Получить группу по идентификатору.
+            </summary>
+            <param name="id">Идентификатор.</param>
+            <param name="cancellationToken">Токен отмены.</param>
+            <response code="200">Запрос выполнен успешно.</response>
+            <response code="404">Группа с указанным идентификатором не найдена.</response>
+            <returns>Модель группы.</returns>
+        </member>
+        <member name="M:VkTask.Host.Api.Controllers.UserGroupController.RegisterUser(VkTask.Contracts.UserGroups.CreateUserGroupDto,System.Threading.CancellationToken)">
+            <summary>
+            Создать новую группу.
+            </summary>
+            <param name="dto">Модель создания группы.</param>
+            <param name="cancellationToken">Токен отмены.</param>
+            <response code="201">Группа успешно создана.</response>
+            <response code="400">Модель данных запроса невалидна.</response>
+            <response code="422">Произошёл конфликт бизнес-логики.</response>
+            <returns>Идентификатор созданной группы.</returns>
+        </member>
+        <member name="M:VkTask.Host.Api.Controllers.UserGroupController.Update(System.Int32,VkTask.Contracts.UserGroups.UpdateUserGroupDto,System.Threading.CancellationToken)">
+            <summary>
+            Обновить группу.
+            </summary>
+            <param name="id">Идентификатор.</param>
+            <param name="dto">Модель обновления группы.</param>
+            <param name="cancellationToken">Токен отмены.</param>
+            <response code="200">Запрос выполнен успешно.</response>
+            <response code="400">Модель данных запроса невалидна.</response>
+            <response code="403">Доступ запрещён.</response>
+            <response code="404">Группа с указанным идентификатором не найдена.</response>
+            <response code="422">Произошёл конфликт бизнес-логики.</response>
+            <returns>Модель обновленной группы.</returns>
+        </member>
+        <member name="M:VkTask.Host.Api.Controllers.UserGroupController.DeleteById(System.Int32,System.Threading.CancellationToken)">
+            <summary>
+            Удалить группу по идентификатору.
+            </summary>
+            <param name="id">Идентификатор.</param>
+            <param name="cancellationToken">Токен отмены.</param>
+            <response code="204">Запрос выполнен успешно.</response>
+            <response code="403">Доступ запрещён.</response>
+        </member>
+        <member name="T:VkTask.Host.Api.Controllers.UserStateController">
+            <summary>
+            Контроллер для работы со статусами.
+            </summary>
+            <response code="500">Произошла внутренняя ошибка.</response>
+        </member>
+        <member name="M:VkTask.Host.Api.Controllers.UserStateController.#ctor(Microsoft.Extensions.Logging.ILogger{VkTask.Host.Api.Controllers.UserStateController},VkTask.Application.AppData.UserStates.Services.IUserStateService)">
+            <summary>
+            Инициализирует экземпляр <see cref="T:VkTask.Host.Api.Controllers.UserStateController"/>
+            </summary>
+            <param name="logger">Сервис логирования.</param>
+            <param name="userStateService">Сервис пользователей.</param>
+        </member>
+        <member name="M:VkTask.Host.Api.Controllers.UserStateController.GetAll(System.Threading.CancellationToken)">
+            <summary>
+            Получить список статусов.
+            </summary>
+            <param name="cancellationToken">Токен отмены.</param>
+            <response code="200">Запрос выполнен успешно</response>
+            <returns>Список моделей статусов.</returns>
+        </member>
+        <member name="M:VkTask.Host.Api.Controllers.UserStateController.GetById(System.Int32,System.Threading.CancellationToken)">
+            <summary>
+            Получить статус по идентификатору.
+            </summary>
+            <param name="id">Идентификатор.</param>
+            <param name="cancellationToken">Токен отмены.</param>
+            <response code="200">Запрос выполнен успешно.</response>
+            <response code="404">Статус с указанным идентификатором не найдена.</response>
+            <returns>Модель статуса.</returns>
+        </member>
+        <member name="M:VkTask.Host.Api.Controllers.UserStateController.RegisterUser(VkTask.Contracts.UserStates.CreateUserStateDto,System.Threading.CancellationToken)">
+            <summary>
+            Создать новый статус.
+            </summary>
+            <param name="dto">Модель создания статуса.</param>
+            <param name="cancellationToken">Токен отмены.</param>
+            <response code="201">Статус успешно создана.</response>
+            <response code="400">Модель данных запроса невалидна.</response>
+            <response code="422">Произошёл конфликт бизнес-логики.</response>
+            <returns>Идентификатор созданного статуса.</returns>
+        </member>
+        <member name="M:VkTask.Host.Api.Controllers.UserStateController.Update(System.Int32,VkTask.Contracts.UserStates.UpdateUserStateDto,System.Threading.CancellationToken)">
+            <summary>
+            Обновить статус.
+            </summary>
+            <param name="id">Идентификатор.</param>
+            <param name="dto">Модель обновления стутуса.</param>
+            <param name="cancellationToken">Токен отмены.</param>
+            <response code="200">Запрос выполнен успешно.</response>
+            <response code="400">Модель данных запроса невалидна.</response>
+            <response code="403">Доступ запрещён.</response>
+            <response code="404">Статус с указанным идентификатором не найден.</response>
+            <response code="422">Произошёл конфликт бизнес-логики.</response>
+            <returns>Модель обновленного стутуса.</returns>
+        </member>
+        <member name="M:VkTask.Host.Api.Controllers.UserStateController.DeleteById(System.Int32,System.Threading.CancellationToken)">
+            <summary>
+            Удалить стутус по идентификатору.
+            </summary>
+            <param name="id">Идентификатор.</param>
+            <param name="cancellationToken">Токен отмены.</param>
+            <response code="204">Запрос выполнен успешно.</response>
+            <response code="403">Доступ запрещён.</response>
+        </member>
+    </members>
+</doc>
