@@ -21,3 +21,4 @@
 ![изображение](https://github.com/Asphalteight/VkProfileTask/assets/128236389/65f130cc-2f0b-48f3-addb-d51909d32e2c)
 
 #### API будет расположено по адресу https://localhost:7100
+#### Пользовательский интерфейс - по адресу https://localhost:7100/swagger/index.html
